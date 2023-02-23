@@ -1,0 +1,25 @@
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+h2 {
+  font-size: 32px;
+  margin-top: 0;
+}
+
+ul {
+  margin-top: 20px;
+  list-style: none;
+  padding-left: 0;
+  
+  li:before {
+    content: "\2022";
+    margin-right: 5px;
+    color: #007bff;
+  }
+}
+
+button {
+  margin-top: 20px;
+}
