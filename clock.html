@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Digital Clock</title>
+	<style>
+		body {
+			font-family: Arial, Helvetica, sans-serif;
+			text-align: center;
+			margin: 0;
+			padding: 0;
+			background-color:black;
+			color:red;
+		}
+
+		h1 {
+			font-size: 3em;
+			margin-top: 50px;
+		}
+	</style>
+</head>
+<body>
+	<h1 id="clock"></h1>
+
+	<script>
+		function showTime() {
+			let date = new Date();
+			let h = date.getHours();
+			let m = date.getMinutes();
+			let s = date.getSeconds();
+			let amPm = (h < 12) ? "AM" : "PM";
+			h = (h % 12) || 12;
+			h = (h < 10) ? "0" + h : h;
+			m = (m < 10) ? "0" + m : m;
+			s = (s < 10) ? "0" + s : s;
+			let time = h + ":" + m + ":" + s + " " + amPm;
+			document.getElementById("clock").innerText = time;
+			setTimeout(showTime, 1000);
+		}
+		showTime();
+	</script>
+</body>
+</html>
